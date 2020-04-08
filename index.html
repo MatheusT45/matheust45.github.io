@@ -1,7 +1,82 @@
+
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <title>Matheus Tavares</title>
+        <link rel="canonical" href="https://matheust45.github.io" />
+        <link rel="icon" type="image/ico" href="favicon.ico">
+        <meta name="theme-color" content="#353434" />
+        <meta property="og:type" content="profile" />
+        <meta name="twitter:card" content="profile" />
+        <meta property="og:url" content="https://matheust45.github.io/" />
+        <meta property="og:image" content="https://avatars3.githubusercontent.com/u/24977196" />
+        <meta name="author" content="Matheus Tavares">
+        <meta property="og:title" content="Matheus Tavares*" />
+        <meta name="Description" content="Web Developer" />
+        <meta name="description" content="Web Developer">
+        <meta property="og:description" content="Web Developer" />
+        <meta name="twitter:site" content="@Math3usT_" />
+        <meta name="twitter:creator" content="@Math3usT_" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="https://kit.fontawesome.com/cab42dffd7.js" crossorigin="anonymous"></script>
+    </head>
+    <body id="body" class="light-mode-body">
+        <div id="dark-mode-div" class="dark-mode">
+            <i id="dark-mode-toggle" class="fas fa-adjust fa-3x" data-toggle="tooltip" data-placement="left" title="Dark Mode" onClick="toggleDarkMode()"></i>
+        </div>
+        <div id="container" class="container-fluid text-center container-light-mode">
+            <img class="img" src="https://avatars3.githubusercontent.com/u/24977196" height="200" width="200"/>
+            <h1>Matheus Andrade Tavares</h1>
+            <h2>Full-stack Web Developer</h2>
+            <p>
+                <br> E-mail: matheus.tavares45@gmail.com
+                <br> Location: Rio de Janeiro, Brazil
+                <div>
+                    Tecnologies <br>  JavaScript(+jQuery, +AJAX, +React, +Vue), 
+                    <br> PHP(+Laravel, +Symfony), MySQL, Docker<br>
+                    <br> Now with Dark Mode!
+                </div>
+
+            </p>
+            <br><br>
+            Links
+            <legend></legend>
+            <nav id="row">
+                <div class="col-xs-4 col-md-4">
+                    <a href="https://www.linkedin.com/in/matheus-t45/" target="_blank"><i class="fab fa-linkedin fa-3x" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-xs-4 col-md-4">
+                    <a href="https://github.com/MatheusT45" target="_blank"><i class="fab fa-github fa-3x" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-xs-4 col-md-4">
+                    <a href="https://twitter.com/Math3usT_" target="_blank"><i class="fab fa-twitter fa-3x" aria-hidden="true"></i></a>
+                </div>
+            </nav>
+        </div>
+        <br>
+        <script>
+            let darkMode = false;
+            const toggleDarkMode = () => {
+                const body = document.getElementById('body');
+                const container = document.getElementById('container');
+
+                if (darkMode) {
+                    body.classList.remove("dark-mode-body");
+                    body.classList.add("light-mode-body");
+
+                    container.classList.remove("container-dark-mode");
+                    container.classList.add("container-light-mode");
+                } else {
+                    body.classList.remove("light-mode-body");
+                    body.classList.add("dark-mode-body");
+
+                    container.classList.remove("container-light-mode");
+                    container.classList.add("container-dark-mode");
+                }
+                darkMode = !darkMode
+            }
+        </script>
+    </body>
 </html>
