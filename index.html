@@ -23,10 +23,10 @@
         <script src="https://kit.fontawesome.com/cab42dffd7.js" crossorigin="anonymous"></script>
     </head>
     <body id="body" class="light-mode-body">
-        <div id="dark-mode-div" class="dark-mode">
-            <i id="dark-mode-toggle" class="fas fa-adjust fa-3x" data-toggle="tooltip" data-placement="left" title="Dark Mode" onClick="toggleDarkMode()"></i>
-        </div>
         <div id="container" class="container-fluid text-center container-light-mode">
+            <div id="dark-mode-div" class="dark-mode">
+               <i id="dark-mode-toggle" class="fas fa-moon fa-3x" data-toggle="tooltip" data-placement="left" title="Dark Mode" onClick="toggleDarkMode()"></i>
+            </div>
             <img class="img" src="https://avatars3.githubusercontent.com/u/24977196" height="200" width="200"/>
             <h1>Matheus Andrade Tavares</h1>
             <h2>Full-stack Web Developer</h2>
@@ -61,16 +61,23 @@
             const toggleDarkMode = () => {
                 const body = document.getElementById('body');
                 const container = document.getElementById('container');
+                const icon = document.getElementById('dark-mode-toggle')
 
                 if (darkMode) {
                     body.classList.remove("dark-mode-body");
                     body.classList.add("light-mode-body");
+
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
 
                     container.classList.remove("container-dark-mode");
                     container.classList.add("container-light-mode");
                 } else {
                     body.classList.remove("light-mode-body");
                     body.classList.add("dark-mode-body");
+
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
 
                     container.classList.remove("container-light-mode");
                     container.classList.add("container-dark-mode");
