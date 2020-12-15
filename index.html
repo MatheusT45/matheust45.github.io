@@ -16,34 +16,38 @@
         <meta name="Description" content="Web Developer" />
         <meta name="description" content="Web Developer">
         <meta property="og:description" content="Web Developer" />
-        <meta name="twitter:site" content="@Math3usT_" />
-        <meta name="twitter:creator" content="@Math3usT_" />
+        <meta name="twitter:site" content="@m4ths_dev" />
+        <meta name="twitter:creator" content="@m4ths_dev" />
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="main.css">
         <script src="https://kit.fontawesome.com/cab42dffd7.js" crossorigin="anonymous"></script>
     </head>
     <body id="body" class="light-mode-body">
-        <div id="container" class="container-fluid text-center container-light-mode">
-            <div id="dark-mode-div" class="dark-mode">
+        <section id="container" class="container-fluid text-center container-light-mode">
+            <span class="dark-mode">
                <i id="dark-mode-toggle" class="fas fa-moon fa-3x" data-toggle="tooltip" data-placement="left" title="Dark Mode" onClick="toggleDarkMode()"></i>
-            </div>
-            <img class="img" src="https://avatars3.githubusercontent.com/u/24977196" height="200" width="200"/>
-            <h1>Matheus Andrade Tavares</h1>
-            <h2>Full Stack Web Developer</h2>
-            <p>
-                <br> E-mail: matheus.tavares45@gmail.com
-                <br> Location: Rio de Janeiro, Brazil
-                <div>
-                    Technologies <br>  JavaScript(+jQuery, +React, +Vue, +Node), 
-                    <br> PHP(+Laravel, +Symfony), MySQL, Docker<br>
-                    <br> Now with Dark Mode!
-                    <br>
-                    <br> I also play some games in my spare time, feel free to add me on steam =D
+            </span>
+            <div class="text-card">
+                <img class="img" src="https://avatars3.githubusercontent.com/u/24977196" height="200" width="200"/>
+                <h1>Matheus Andrade Tavares</h1>
+                <h2>Full Stack Web Developer</h2>
+                <p>E-mail: matheus.tavares45@gmail.com</p>
+                <p>Location: Rio de Janeiro, Brazil</p>
+                <h3>Technologies</h3>
+                <div class="technologies">
+                    <p>Frontend: JavaScript(React, Vue), HTML, CSS;</p>
+                    <p>Backend: PHP(Laravel, Symfony), NodeJS;</p>
+                    <p>DB: MySQL, MongoDB;</p>
+                    <p>Infra: Docker, Jenkins;</p>
+                    <p>Other: Git, Python, GraphQL, REST;</p>
+                    <p>Studying: AWS, Kubernetes, CSS(Flexbox);</p>
                 </div>
-
-            </p>
-            <br><br>
-            Links
+                <div class="features">
+                    <p>Now with <b>Dark Mode!</b></p>
+                    <p>I also play some games in my spare time, feel free to add me on steam =D</p>
+                </div>
+            </div>
+            <p>Links</p>
             <legend></legend>
             <nav id="row">
                 <div class="col-xs-3 col-md-3">
@@ -59,36 +63,35 @@
                     <a href="https://steamcommunity.com/id/suddendeath32/" target="_blank"><i class="fab fa-steam fa-3x" aria-hidden="true"></i></a>
                 </div>
             </nav>
-        </div>
-        <br>
-        <script>
-            let darkMode = false;
-            const toggleDarkMode = () => {
-                const body = document.getElementById('body');
-                const container = document.getElementById('container');
-                const icon = document.getElementById('dark-mode-toggle')
-
-                if (darkMode) {
-                    body.classList.remove("dark-mode-body");
-                    body.classList.add("light-mode-body");
-
-                    icon.classList.remove('fa-sun');
-                    icon.classList.add('fa-moon');
-
-                    container.classList.remove("container-dark-mode");
-                    container.classList.add("container-light-mode");
-                } else {
-                    body.classList.remove("light-mode-body");
-                    body.classList.add("dark-mode-body");
-
-                    icon.classList.remove('fa-moon');
-                    icon.classList.add('fa-sun');
-
-                    container.classList.remove("container-light-mode");
-                    container.classList.add("container-dark-mode");
-                }
-                darkMode = !darkMode
-            }
-        </script>
+        </section>
     </body>
+    <script>
+        let darkMode = false;
+        const toggleDarkMode = () => {
+            const body = document.getElementById('body');
+            const container = document.getElementById('container');
+            const icon = document.getElementById('dark-mode-toggle')
+
+            if (darkMode) {
+                body.classList.remove("dark-mode-body");
+                body.classList.add("light-mode-body");
+
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+
+                container.classList.remove("container-dark-mode");
+                container.classList.add("container-light-mode");
+            } else {
+                body.classList.remove("light-mode-body");
+                body.classList.add("dark-mode-body");
+
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+
+                container.classList.remove("container-light-mode");
+                container.classList.add("container-dark-mode");
+            }
+            darkMode = !darkMode
+        }
+    </script>
 </html>
