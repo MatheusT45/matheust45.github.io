@@ -70,17 +70,9 @@ a:hover {
     margin-top: -20%;
 }
 
-.technologies{
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .technologies > p {
   margin: 0;
   padding: 0;
-  text-align: left;
 }
 
 .features {
