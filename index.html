@@ -6,6 +6,12 @@
         <title>Matheus Tavares</title>
         <link rel="canonical" href="https://matheust45.github.io" />
         <link rel="icon" type="image/ico" href="favicon.ico">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/assets/icon/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#353434" />
         <meta property="og:type" content="profile" />
         <meta name="twitter:card" content="profile" />
@@ -18,17 +24,19 @@
         <meta property="og:description" content="Web Developer" />
         <meta name="twitter:site" content="@m4ths_dev" />
         <meta name="twitter:creator" content="@m4ths_dev" />
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="main.css">
-        <script src="https://kit.fontawesome.com/cab42dffd7.js" crossorigin="anonymous"></script>
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+        
     </head>
-    <body id="body" class="light-mode-body">
-        <section id="container" class="container-fluid text-center container-light-mode">
+    <body class="light-mode-body">
+        <section id="container" class="text-center container-light-mode">
             <span class="dark-mode">
                <i id="dark-mode-toggle" class="fas fa-moon fa-3x" data-toggle="tooltip" data-placement="left" title="Dark Mode" onClick="toggleDarkMode()"></i>
             </span>
             <div class="text-card">
                 <img class="img" src="https://avatars3.githubusercontent.com/u/24977196" height="200" width="200"/>
+                <a href="https://github.com/MatheusT45?tab=repositories" class="projects-icon">My projects <i class="fas fa-external-link-alt" data-toggle="tooltip" data-placement="left" title="Projects"></i></a>
                 <h1>Matheus Andrade Tavares</h1>
                 <h2>Full Stack Web Developer</h2>
                 <p>E-mail: matheus.tavares45@gmail.com</p>
@@ -47,20 +55,13 @@
                     <p>I also play some games in my spare time, feel free to add me on steam =D</p>
                 </div>
             </div>
-            <p>Links</p>
-            <legend></legend>
-            <nav id="row">
-                <div class="col-xs-3 col-md-3">
-                    <a href="https://www.linkedin.com/in/matheus-t45/" target="_blank"><i class="fab fa-linkedin fa-3x" aria-hidden="true"></i></a>
-                </div>
-                <div class="col-xs-3 col-md-3">
-                    <a href="https://github.com/MatheusT45" target="_blank"><i class="fab fa-github fa-3x" aria-hidden="true"></i></a>
-                </div>
-                <div class="col-xs-3 col-md-3">
-                    <a href="https://twitter.com/m4ths_dev" target="_blank"><i class="fab fa-twitter fa-3x" aria-hidden="true"></i></a>
-                </div>
-                <div class="col-xs-3 col-md-3">
-                    <a href="https://steamcommunity.com/id/suddendeath32/" target="_blank"><i class="fab fa-steam fa-3x" aria-hidden="true"></i></a>
+            <p class="links-title">Links</p>
+            <hr/>
+            <nav class="links">
+                <a href="https://www.linkedin.com/in/matheus-t45/" target="_blank"><i class="fab fa-linkedin fa-3x" aria-hidden="true"></i></a>
+                <a href="https://github.com/MatheusT45" target="_blank"><i class="fab fa-github fa-3x" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/m4ths_dev" target="_blank"><i class="fab fa-twitter fa-3x" aria-hidden="true"></i></a>
+                <a href="https://steamcommunity.com/id/suddendeath32/" target="_blank"><i class="fab fa-steam fa-3x" aria-hidden="true"></i></a>
                 </div>
             </nav>
         </section>
@@ -68,7 +69,7 @@
     <script>
         let darkMode = false;
         const toggleDarkMode = () => {
-            const body = document.getElementById('body');
+            const body = document.getElementsByTagName('body')[0];
             const container = document.getElementById('container');
             const icon = document.getElementById('dark-mode-toggle')
 
