@@ -7,53 +7,56 @@
         <link rel="canonical" href="https://matheust45.github.io" />
         <link rel="icon" type="image/ico" href="favicon.ico">
         <link rel="stylesheet" type="text/css" href="main.css">
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
-        <link rel="mask-icon" href="/assets/icon/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="theme-color" content="#353434" />
         <meta property="og:type" content="profile" />
         <meta name="twitter:card" content="profile" />
         <meta property="og:url" content="https://matheust45.github.io/" />
         <meta property="og:image" content="https://avatars3.githubusercontent.com/u/24977196" />
         <meta name="author" content="Matheus Tavares">
-        <meta property="og:title" content="Matheus Tavares*" />
+        <meta property="og:title" content="Matheus Tavares" />
         <meta name="Description" content="Web Developer" />
         <meta name="description" content="Web Developer">
         <meta property="og:description" content="Web Developer" />
         <meta name="twitter:site" content="@m4ths_dev" />
         <meta name="twitter:creator" content="@m4ths_dev" />
-        <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
         <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
         
     </head>
-    <body class="light-mode-body">
-        <section id="container" class="text-center container-light-mode">
-            <span class="dark-mode">
-               <i id="dark-mode-toggle" class="fas fa-moon fa-3x" data-toggle="tooltip" data-placement="left" title="Dark Mode" onClick="toggleDarkMode()"></i>
-            </span>
+    <body class="dark-mode-body">
+        <div class="background"></div>
+        <section id="container" class="text-center container-dark-mode">
             <div class="text-card">
                 <img class="img" src="https://avatars3.githubusercontent.com/u/24977196" height="200" width="200"/>
-                <a href="https://github.com/MatheusT45" class="projects-icon">My projects <i class="fas fa-external-link-alt" data-toggle="tooltip" data-placement="left" title="Projects"></i></a>
                 <h1>Matheus Andrade Tavares</h1>
                 <h2>Full Stack Web Developer</h2>
                 <p>E-mail: matheus.tavares45@gmail.com</p>
                 <p>Location: Rio de Janeiro, Brazil</p>
-                <h3>Technologies</h3>
+                <h3>About me</h3>
+                <p>Hello! I’m a Web developer that focuses on communication,</p>
+                <p>learning, and challenge myself everyday!</p>
+                <h4>Technologies</h4>
                 <div class="technologies">
                     <p>Frontend: JS(React, Vue), HTML, CSS;</p>
                     <p>Backend: PHP(Laravel, Symfony), NodeJS;</p>
                     <p>DB: MySQL, MongoDB;</p>
                     <p>Infra: Docker, Jenkins;</p>
-                    <p>Other: Git, Python, GraphQL, REST;</p>
+                    <p>Other: Typescript, Git, Python, GraphQL, REST;</p>
                     <p>Studying: AWS, Kubernetes, CSS(Flexbox);</p>
                 </div>
-                <div class="features">
-                    <p>Now with <b>Dark Mode!</b></p>
-                    <p>I also play some games in my spare time, feel free to add me on steam =D</p>
-                </div>
+                <!-- <h4>Projects</h4>
+                <div class="projects">
+                    <div class="project-info">ACTA</div>
+                    <div class="project-info">Project-Galaxy</div>
+                    <div class="project-info">Crypto Exchange Challenge</div>
+                    <div class="project-info">Just Another ToDo List App</div>
+                    <div class="project-info">PokeAPI</div>
+                    <div class="project-info">Flexbox and Grid Training</div>
+                </div> -->
             </div>
             <p class="links-title">Links</p>
             <hr/>
@@ -66,33 +69,4 @@
             </nav>
         </section>
     </body>
-    <script>
-        let darkMode = false;
-        const toggleDarkMode = () => {
-            const body = document.getElementsByTagName('body')[0];
-            const container = document.getElementById('container');
-            const icon = document.getElementById('dark-mode-toggle')
-
-            if (darkMode) {
-                body.classList.remove("dark-mode-body");
-                body.classList.add("light-mode-body");
-
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-
-                container.classList.remove("container-dark-mode");
-                container.classList.add("container-light-mode");
-            } else {
-                body.classList.remove("light-mode-body");
-                body.classList.add("dark-mode-body");
-
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-
-                container.classList.remove("container-light-mode");
-                container.classList.add("container-dark-mode");
-            }
-            darkMode = !darkMode
-        }
-    </script>
 </html>
