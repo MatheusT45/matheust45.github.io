@@ -43,7 +43,7 @@
             <h1>📓 My Projects</h1>
                 <div class="projects">
                 </div>
-            <p class="links-title">Links</p>
+            <h1>🔗 Links</h1>
             <hr/>
             <nav class="links">
                 <a href="https://www.linkedin.com/in/mthstv/" target="_blank"><i class="fab fa-linkedin fa-3x" aria-hidden="true"></i></a>
@@ -67,7 +67,7 @@
             .then(response => response.json())
             .then(repos => {
                 repos.sort((a, b) => {
-                    return new Date(b.updated_at) - new Date(a.updated_at);
+                    return new Date(b.created_at) - new Date(a.created_at);
                 });
                 repos.map(repo => {
                     document.querySelector('.projects').innerHTML += `
@@ -75,7 +75,7 @@
                         <a href="${repo.html_url}">
                             ${repo.name}
                         </a>
-                        - ${repo.description};
+                        - ${repo.description}${repo.fork? ' (forked)' : ''};
                     </div>`;
                     return {
                         name: repo.name,
